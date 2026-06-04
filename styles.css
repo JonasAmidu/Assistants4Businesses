@@ -97,6 +97,7 @@ nav a {
 }
 
 .hero,
+.video-showcase,
 .section,
 .workflow,
 .feature-band,
@@ -132,6 +133,7 @@ nav a {
 }
 
 .hero p,
+.video-showcase p,
 .workflow > div p,
 .feature-band p,
 .contact p {
@@ -200,6 +202,41 @@ nav a {
   border-radius: 8px;
   min-height: 500px;
   padding: 22px;
+}
+
+.video-showcase {
+  align-items: center;
+  display: grid;
+  gap: 34px;
+  grid-template-columns: minmax(0, 0.78fr) minmax(360px, 1.22fr);
+  padding-top: 0;
+}
+
+.video-copy h2 {
+  font-size: clamp(2.1rem, 4.4vw, 3.8rem);
+  letter-spacing: 0;
+  line-height: 1.04;
+  margin: 0;
+}
+
+.video-shell {
+  background:
+    linear-gradient(135deg, rgba(255, 209, 102, 0.12), rgba(103, 232, 201, 0.11)),
+    rgba(16, 29, 35, 0.9);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.video-shell video {
+  aspect-ratio: 16 / 9;
+  background: #020608;
+  border-radius: 6px;
+  display: block;
+  height: auto;
+  max-height: 640px;
+  object-fit: contain;
+  width: 100%;
 }
 
 .lottie-frame {
@@ -535,6 +572,7 @@ footer {
   }
 
   .hero,
+  .video-showcase,
   .workflow,
   .feature-band {
     grid-template-columns: 1fr;
