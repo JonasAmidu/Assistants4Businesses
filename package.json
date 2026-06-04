@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "render:video": "remotion render remotion/index.ts Assistants4BusinessesVideo assets/media/remotion-assistant-demo.mp4 --codec h264 --pixel-format yuv420p"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.339",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "remotion": "^4.0.339"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.8",
+    "typescript": "^5.8.3"
+  }
+}
