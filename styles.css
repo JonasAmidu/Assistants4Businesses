@@ -316,20 +316,30 @@ nav a {
 .trust-strip {
   border-block: 1px solid var(--line);
   display: grid;
-  gap: 1px;
   grid-template-columns: repeat(4, 1fr);
 }
 
 .trust-strip span {
   align-items: center;
-  background: rgba(255, 255, 255, 0.04);
   color: #dcecf4;
   display: flex;
   gap: 10px;
   font-weight: 900;
   justify-content: center;
   padding: 22px;
+  position: relative;
   text-align: center;
+}
+
+.trust-strip span + span::before {
+  background: linear-gradient(180deg, transparent, rgba(110, 231, 226, 0.6), transparent);
+  content: "";
+  height: 34px;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
 }
 
 .trust-strip svg {
@@ -591,6 +601,16 @@ footer {
   .trust-strip span {
     justify-content: flex-start;
     text-align: left;
+  }
+
+  .trust-strip span + span::before {
+    background: linear-gradient(90deg, transparent, rgba(110, 231, 226, 0.5), transparent);
+    height: 1px;
+    left: 22px;
+    right: 22px;
+    top: 0;
+    transform: none;
+    width: auto;
   }
 
   .hero-visual,
