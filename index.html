@@ -11,6 +11,39 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <svg class="icon-sprite" aria-hidden="true">
+      <symbol id="icon-message" viewBox="0 0 24 24">
+        <path d="M4.5 5.8c0-1 0.8-1.8 1.8-1.8h11.4c1 0 1.8 0.8 1.8 1.8v7.4c0 1-0.8 1.8-1.8 1.8h-6.5l-4.8 3.7v-3.7h-0.1c-1 0-1.8-0.8-1.8-1.8z" />
+      </symbol>
+      <symbol id="icon-code" viewBox="0 0 24 24">
+        <path d="M9.5 7 5 12l4.5 5M14.5 7 19 12l-4.5 5" />
+      </symbol>
+      <symbol id="icon-clock" viewBox="0 0 24 24">
+        <path d="M12 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16zM12 8v4.5l3 1.7" />
+      </symbol>
+      <symbol id="icon-workflow" viewBox="0 0 24 24">
+        <path d="M6 7h6a4 4 0 0 1 4 4v6M6 7l3-3M6 7l3 3M16 17l-3-3M16 17l-3 3" />
+      </symbol>
+      <symbol id="icon-calendar" viewBox="0 0 24 24">
+        <path d="M6 5h12a2 2 0 0 1 2 2v12H4V7a2 2 0 0 1 2-2zM8 3v4M16 3v4M4 10h16" />
+      </symbol>
+      <symbol id="icon-arrow" viewBox="0 0 24 24">
+        <path d="M5 12h14M13 6l6 6-6 6" />
+      </symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24">
+        <path d="m5 12 4 4L19 6" />
+      </symbol>
+      <symbol id="icon-contact" viewBox="0 0 24 24">
+        <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4.5 20a7.5 7.5 0 0 1 15 0" />
+      </symbol>
+      <symbol id="icon-phone" viewBox="0 0 24 24">
+        <path d="M6.5 4.5 9 4l2 4-1.5 1.5a10 10 0 0 0 5 5L16 13l4 2-0.5 2.5c-0.2 1-1.1 1.7-2.1 1.5C10.5 18.1 5.9 13.5 5 6.6 4.8 5.6 5.5 4.7 6.5 4.5z" />
+      </symbol>
+      <symbol id="icon-mail" viewBox="0 0 24 24">
+        <path d="M4 6h16v12H4zM4 7l8 6 8-6" />
+      </symbol>
+    </svg>
+
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Assistants4Businesses home">
         <span>A4B</span>
@@ -35,8 +68,14 @@
             and daily operations into one reliable assistant layer.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#demo">Book a free demo</a>
-            <a class="button secondary" href="#services">See what we build</a>
+            <a class="button primary" href="#demo">
+              <svg><use href="#icon-calendar"></use></svg>
+              Book a free demo
+            </a>
+            <a class="button secondary" href="#services">
+              <svg><use href="#icon-workflow"></use></svg>
+              See what we build
+            </a>
           </div>
         </div>
         <div class="hero-visual" aria-label="Animated assistant workflow">
@@ -45,10 +84,10 @@
       </section>
 
       <section class="trust-strip" aria-label="Business outcomes">
-        <span>WhatsApp assistant access</span>
-        <span>Coding workspaces</span>
-        <span>Daily task automation</span>
-        <span>Always-on support</span>
+        <span><svg><use href="#icon-message"></use></svg>WhatsApp assistant access</span>
+        <span><svg><use href="#icon-code"></use></svg>Coding workspaces</span>
+        <span><svg><use href="#icon-workflow"></use></svg>Daily task automation</span>
+        <span><svg><use href="#icon-clock"></use></svg>Always-on support</span>
       </section>
 
       <section id="services" class="section">
@@ -58,6 +97,7 @@
         </div>
         <div class="service-grid">
           <article class="service-card">
+            <div class="card-icon"><svg><use href="#icon-message"></use></svg></div>
             <div class="lottie-frame" data-lottie="./assets/lottie/whatsapp-orbit.json"></div>
             <h3>WhatsApp assistant setup</h3>
             <p>
@@ -66,6 +106,7 @@
             </p>
           </article>
           <article class="service-card">
+            <div class="card-icon"><svg><use href="#icon-code"></use></svg></div>
             <div class="lottie-frame" data-lottie="./assets/lottie/assistant-core.json"></div>
             <h3>Coding environments</h3>
             <p>
@@ -74,6 +115,7 @@
             </p>
           </article>
           <article class="service-card">
+            <div class="card-icon"><svg><use href="#icon-clock"></use></svg></div>
             <div class="lottie-frame" data-lottie="./assets/lottie/always-on.json"></div>
             <h3>24/7 operations</h3>
             <p>
@@ -95,17 +137,17 @@
         </div>
         <ol class="steps">
           <li>
-            <span>01</span>
+            <span><svg><use href="#icon-workflow"></use></svg>01</span>
             <strong>Map the workflow</strong>
             <p>Identify daily admin, customer comms, handovers, reporting, and app-building needs.</p>
           </li>
           <li>
-            <span>02</span>
+            <span><svg><use href="#icon-code"></use></svg>02</span>
             <strong>Configure the assistant</strong>
             <p>Set up tools, memory, prompts, safe actions, schedules, and communication channels.</p>
           </li>
           <li>
-            <span>03</span>
+            <span><svg><use href="#icon-clock"></use></svg>03</span>
             <strong>Launch and iterate</strong>
             <p>Deploy the assistant, review usage, improve automations, and add new workflows.</p>
           </li>
@@ -134,21 +176,21 @@
             environments, or 24/7 operations.
           </p>
           <ul>
-            <li>No generic sales deck</li>
-            <li>Bring one workflow you want automated</li>
-            <li>Leave with a clear assistant build plan</li>
+            <li><svg><use href="#icon-check"></use></svg>No generic sales deck</li>
+            <li><svg><use href="#icon-workflow"></use></svg>Bring one workflow you want automated</li>
+            <li><svg><use href="#icon-check"></use></svg>Leave with a clear assistant build plan</li>
           </ul>
           <div class="intake-panel">
             <h3>What the form will ask for</h3>
             <div class="intake-grid">
-              <span>Business name and address</span>
-              <span>Business type and team size</span>
-              <span>Contact person, role, email, and phone</span>
-              <span>How email is used today</span>
-              <span>Social media channels and posting process</span>
-              <span>WhatsApp, phone, and customer message flow</span>
-              <span>Daily admin tasks that repeat</span>
-              <span>Workflows they most want automated</span>
+              <span><svg><use href="#icon-contact"></use></svg>Business name and address</span>
+              <span><svg><use href="#icon-workflow"></use></svg>Business type and team size</span>
+              <span><svg><use href="#icon-contact"></use></svg>Contact person, role, email, and phone</span>
+              <span><svg><use href="#icon-mail"></use></svg>How email is used today</span>
+              <span><svg><use href="#icon-message"></use></svg>Social media channels and posting process</span>
+              <span><svg><use href="#icon-phone"></use></svg>WhatsApp, phone, and customer message flow</span>
+              <span><svg><use href="#icon-clock"></use></svg>Daily admin tasks that repeat</span>
+              <span><svg><use href="#icon-workflow"></use></svg>Workflows they most want automated</span>
             </div>
           </div>
           <a
@@ -158,6 +200,7 @@
             target="_blank"
             rel="noreferrer"
           >
+            <svg><use href="#icon-arrow"></use></svg>
             Fill out the Google Form
           </a>
         </div>
@@ -170,7 +213,10 @@
           We will help design the assistant setup, connect the right tools, and build the first
           useful workflow before expanding across the business.
         </p>
-        <a class="button primary" href="#demo">Book a free demo</a>
+        <a class="button primary" href="#demo">
+          <svg><use href="#icon-calendar"></use></svg>
+          Book a free demo
+        </a>
       </section>
     </main>
 

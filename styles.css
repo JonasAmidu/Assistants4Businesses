@@ -19,7 +19,8 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
+  scroll-padding-top: 92px;
 }
 
 body {
@@ -34,6 +35,20 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.icon-sprite {
+  height: 0;
+  position: absolute;
+  width: 0;
+}
+
+svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
 }
 
 .site-header {
@@ -143,12 +158,28 @@ nav a {
 }
 
 .button {
+  align-items: center;
   border-radius: 8px;
   display: inline-flex;
+  gap: 10px;
   font-weight: 950;
   justify-content: center;
   min-width: 164px;
   padding: 15px 20px;
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: translateY(-2px);
+}
+
+.button svg {
+  height: 20px;
+  width: 20px;
 }
 
 .button.primary {
@@ -253,11 +284,22 @@ nav a {
 }
 
 .trust-strip span {
+  align-items: center;
   background: rgba(255, 255, 255, 0.04);
   color: #dcecf4;
+  display: flex;
+  gap: 10px;
   font-weight: 900;
+  justify-content: center;
   padding: 22px;
   text-align: center;
+}
+
+.trust-strip svg {
+  color: var(--teal);
+  height: 22px;
+  min-width: 22px;
+  width: 22px;
 }
 
 .section-heading {
@@ -287,6 +329,7 @@ nav a {
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 20px;
+  position: relative;
 }
 
 .service-card:nth-child(2) {
@@ -300,6 +343,27 @@ nav a {
 .service-card h3 {
   font-size: 1.35rem;
   margin: 18px 0 10px;
+}
+
+.card-icon {
+  align-items: center;
+  background: rgba(103, 232, 201, 0.12);
+  border: 1px solid rgba(103, 232, 201, 0.38);
+  border-radius: 8px;
+  color: var(--teal);
+  display: flex;
+  height: 44px;
+  justify-content: center;
+  left: 20px;
+  position: absolute;
+  top: 20px;
+  width: 44px;
+  z-index: 3;
+}
+
+.card-icon svg {
+  height: 23px;
+  width: 23px;
 }
 
 .service-card p,
@@ -332,8 +396,16 @@ footer span {
 }
 
 .steps span {
+  align-items: center;
   color: var(--gold);
+  display: inline-flex;
+  gap: 8px;
   font-weight: 950;
+}
+
+.steps span svg {
+  height: 20px;
+  width: 20px;
 }
 
 .steps strong {
@@ -387,11 +459,21 @@ footer span {
 }
 
 .demo-card li {
+  align-items: center;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid var(--line);
   border-radius: 8px;
+  display: flex;
+  gap: 10px;
   font-weight: 850;
   padding: 14px 16px;
+}
+
+.demo-card li svg {
+  color: var(--gold);
+  height: 20px;
+  min-width: 20px;
+  width: 20px;
 }
 
 .intake-panel {
@@ -413,21 +495,19 @@ footer span {
 }
 
 .intake-grid span {
+  align-items: flex-start;
   color: #dcecf4;
+  display: flex;
+  gap: 10px;
   line-height: 1.35;
-  padding-left: 20px;
-  position: relative;
 }
 
-.intake-grid span::before {
-  background: var(--teal);
-  border-radius: 999px;
-  content: "";
-  height: 8px;
-  left: 0;
-  position: absolute;
-  top: 8px;
-  width: 8px;
+.intake-grid svg {
+  color: var(--teal);
+  height: 19px;
+  margin-top: 1px;
+  min-width: 19px;
+  width: 19px;
 }
 
 .contact {
@@ -468,6 +548,11 @@ footer {
   .trust-strip,
   .intake-grid {
     grid-template-columns: 1fr;
+  }
+
+  .trust-strip span {
+    justify-content: flex-start;
+    text-align: left;
   }
 
   .hero-visual,
